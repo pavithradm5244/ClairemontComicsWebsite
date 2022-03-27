@@ -2,11 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-
-/*this is the grid container for the whole page*/
+/* this is the grid container for the whole page */
 container{
     display: grid;
     width: 100%;
@@ -21,26 +20,31 @@ container{
     grid-row-gap: 15px;
 }
 
+/* header container */
 header{
     grid-area: header;
     background-color:darkviolet;
 }
 
+/* content container - main area for the webpage */
 content{
     grid-area: content;
     background-color: cornflowerblue;
 }
 
+/* empty space to the left of the content container */
 left-space{
     grid-area: left-space;
     background-color: chartreuse;
 }
 
+/* empty space to the right of the content container */
 right-space{
     grid-area: right-space;
     background-color: mediumvioletred;
 }
 
+/* main footer container */
 footer{
     grid-area: footer;
     background-color: rgb(223, 84, 19);
@@ -49,20 +53,43 @@ footer{
         "footer_header footer_header"
         "footer_contact footer_hours";
     grid-template-columns: 3fr 4fr;
+    color: rgb(247, 220, 220);
 }
 
 #footer_header{
     grid-area: footer_header;
+    background-color: rgb(192, 65, 6);
+    padding: 10px 20px;
 }
 
 #footer_contact{
     grid-area: footer_contact;
+    padding: 10px 20px;
 }
 
 #footer_hours{
     grid-area: footer_hours;
+    padding: 10px 20px;    
 }
 
+/* styling for icons in the footer */
+footer img{
+    height:2em; 
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+/* styling for unclicked and visited links in footer*/
+footer a:link, footer a:visited{
+    color: rgb(247, 220, 220);
+    text-decoration: none;
+}
+
+/* adds text effect when clicking or hovering a link in footer */
+footer a:hover, footer a:active{
+    color:white;
+    text-decoration: none;
+}
 
 
 @media (max-width: 900px){
@@ -80,6 +107,7 @@ footer{
             "footer_header"
             "footer_contact"
             "footer_hours";
+        grid-template-columns: 100%;
     }
 
 }
