@@ -187,7 +187,7 @@ footer a:hover, footer a:active{
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 /* page layout */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 800px){
     container{
         grid-template-areas:
             "header"
@@ -208,14 +208,14 @@ footer a:hover, footer a:active{
 }
 
 /* nav layout */
-@media screen and (min-width: 900px){
+@media screen and (min-width: 800px){
     .nav_toggle_label{
         display:none;
     }
     
     header{
         display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        grid-template-columns:1fr auto minmax(600px, 6fr) 1fr;
     }
 
     .logo{
