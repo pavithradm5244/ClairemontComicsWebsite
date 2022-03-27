@@ -20,11 +20,14 @@ container{
     grid-row-gap: 15px;
 }
 
+/* HEADER STYLING */
 /* header container */
 header{
     grid-area: header;
     background-color:darkviolet;
 }
+
+/* END OF HEADER STYLING */
 
 /* content container - main area for the webpage */
 content{
@@ -44,6 +47,8 @@ right-space{
     background-color: mediumvioletred;
 }
 
+
+/* FOOTER STYLING */
 /* main footer container */
 footer{
     grid-area: footer;
@@ -90,8 +95,10 @@ footer a:hover, footer a:active{
     color:white;
     text-decoration: none;
 }
+/* END OF FOOTER STYLING */
 
 
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 @media (max-width: 900px){
     container{
         grid-template-areas:
