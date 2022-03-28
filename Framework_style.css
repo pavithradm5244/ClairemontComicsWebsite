@@ -17,7 +17,7 @@ container{
     grid-template-areas: 
         "left-space content right-space"
         "footer footer footer";
-    grid-template-rows: 600px 0.5fr;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 1000px 1fr;
     background-color: black;
     grid-row-gap: 15px;
@@ -125,21 +125,21 @@ nav a:hover{
 /* content container - main area for the webpage */
 content{
     grid-area: content;
-    background-color: cornflowerblue;
+    background-color: rgb(255, 255, 255);
     margin-top: 67px;
 }
 
 /* empty space to the left of the content container */
 left-space{
     grid-area: left-space;
-    background-color: chartreuse;
+    background-color:rgb(247, 153, 99);
     margin-top: 67px;
 }
 
 /* empty space to the right of the content container */
 right-space{
     grid-area: right-space;
-    background-color: mediumvioletred;
+    background-color:rgb(247, 153, 99);
     margin-top: 67px;
 }
 
@@ -199,14 +199,24 @@ footer a:hover, footer a:active{
 @media screen and (max-width: 1000px){
     container{
         grid-template-areas:
-            "header"
             "content"
             "footer";
         grid-template-columns: 100%;
-        grid-template-rows: 68px 1fr auto;
+        grid-template-rows: 1fr auto;
         height: 100vh;
     }
 
+    /*footer{
+        grid-template-areas: 
+            "footer_header"
+            "footer_contact"
+            "footer_hours";
+        grid-template-columns: 100%;
+    }*/
+
+}
+
+@media screen and (max-width: 700px) {
     footer{
         grid-template-areas: 
             "footer_header"
@@ -214,7 +224,7 @@ footer a:hover, footer a:active{
             "footer_hours";
         grid-template-columns: 100%;
     }
-
+    
 }
 
 /* nav layout */
