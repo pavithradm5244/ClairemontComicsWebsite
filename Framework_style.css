@@ -148,7 +148,7 @@ content h2{
 /* empty space to the left of the content container */
 left-space{
     grid-area: left-space;
-    background-image:linear-gradient(rgba(255, 210, 184, 0.705), rgba(255, 210, 184, 0.705)), url(images/webb.png);
+    background-image: url(images/background.svg);
     margin-top: 67px;
 }
 
@@ -166,7 +166,7 @@ left-space{
 /* empty space to the right of the content container */
 right-space{
     grid-area: right-space;
-    background-image:linear-gradient(rgba(255, 210, 184, 0.705), rgba(255, 210, 184, 0.705)), url(images/webb.png);
+    background-image: url(images/background.svg);
     margin-top: 67px;
 }
 
