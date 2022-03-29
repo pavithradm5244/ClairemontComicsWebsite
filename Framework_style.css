@@ -130,6 +130,16 @@ content{
     background-color: rgb(255, 255, 255);
     margin-top: 67px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px 30px;
+}
+
+content h2{
+    text-align: center;
+    margin: 5px;
+    color:rgb(160, 11, 6);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
 }
 
 /* empty space to the left of the content container */
