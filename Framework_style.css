@@ -15,10 +15,10 @@ container{
     width: 100%;
     height: 100vh;
     grid-template-areas: 
-        "left-space content right-space"
-        "footer footer footer";
+        "left-space border_left content border_right right-space"
+        "footer footer footer footer footer";
     grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 1000px 1fr;
+    grid-template-columns: 1fr 25px 1000px 25px 1fr;
     background-color: black;
     grid-row-gap: 15px;
 }
@@ -124,6 +124,7 @@ nav a:hover{
 
 /* END OF HEADER STYLING */
 
+/* CONTENT STYLING */
 /* content container - main area for the webpage */
 content{
     grid-area: content;
@@ -142,17 +143,30 @@ content h2{
     text-transform: uppercase;
 }
 
+/* END OF CONTENT STYLING*/
+
 /* empty space to the left of the content container */
 left-space{
     grid-area: left-space;
-    background-color:rgb(247, 153, 99);
+    background-image:linear-gradient(rgba(255, 210, 184, 0.705), rgba(255, 210, 184, 0.705)), url(images/webb.png);
+    margin-top: 67px;
+}
+
+.border_left{
+    background-color: rgb(255, 121, 44);
+    grid-area: border_left;
+    margin-top: 67px;
+}
+.border_right{
+    background-color: rgb(255, 121, 44);
+    grid-area: border_right;
     margin-top: 67px;
 }
 
 /* empty space to the right of the content container */
 right-space{
     grid-area: right-space;
-    background-color:rgb(247, 153, 99);
+    background-image:linear-gradient(rgba(255, 210, 184, 0.705), rgba(255, 210, 184, 0.705)), url(images/webb.png);
     margin-top: 67px;
 }
 
