@@ -1,0 +1,64 @@
+content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+content .subtitle{
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.form_container{
+    border-radius: 20px;
+    background-color: rgb(252, 205, 152);
+    margin: 1em;
+    width:60%;
+    padding: 20px 30px;
+}
+
+container form{
+    display: grid;
+    grid-template-areas: 
+        "f_name l_name"
+        "address address"
+        "subject subject"
+        "msg msg"
+        "sub_button sub_button";
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.form_container label{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    color: rgb(121, 9, 5);
+}
+
+.form_container label, .form_container input, .form_container textarea{
+    display: block;
+    width: 100%;
+}
+
+/* Declaring grid-areas */
+.first_name_box{
+    grid-area: f_name;
+}
+.last_name_box{
+    grid-area: l_name;
+    
+}
+.email_add_box{
+    grid-area: address;
+}
+.subject_box{
+    grid-area: subject;
+}
+.contact_msg_box{
+    grid-area: msg;
+}
+.submit_button{
+    grid-area: sub_button;
+}
+
+/*media query for responsive design */

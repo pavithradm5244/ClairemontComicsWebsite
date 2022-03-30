@@ -13,11 +13,11 @@
 container{
     display: grid;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     grid-template-areas: 
         "left-space border_left content border_right right-space"
         "footer footer footer footer footer";
-    grid-template-rows: 1fr auto;
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
     grid-template-columns: 1fr 25px 1000px 25px 1fr;
     background-color: black;
     grid-row-gap: 15px;
@@ -131,7 +131,11 @@ content{
     background-color: rgb(255, 255, 255);
     margin-top: 67px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 20px 30px;
+    padding: 20px 30px 30px 30px;
+}
+
+content p{
+    margin-top: 1.2em;
 }
 
 content h2{
@@ -236,7 +240,7 @@ footer a:hover, footer a:active{
             "footer";
         grid-template-columns: 100%;
         grid-template-rows: 1fr auto;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     /*footer{
