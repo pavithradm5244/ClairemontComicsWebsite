@@ -5,6 +5,10 @@
     height: 400px;
 }
 
+header{
+    z-index: 1;
+}
+
 .imgContainer {
     float: left;
     position: relative;
