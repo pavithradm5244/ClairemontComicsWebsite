@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Framework_style.css">
+    <link rel="stylesheet" href="events_style.css">
     <link rel="icon" type="image/x-icon" href="/images/clairmont.svg">
     <title>Clairemont Comics</title>
 </head>
 <body>
-   
+    <!-- JS JDK for facebook embed-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="eRt5R1F2"></script>
+    
     <container>
         <!--Header Markup-->
         <header>
@@ -38,8 +42,10 @@
         <div class="border_left"></div>
         <!--Main Content Markup-->
         <content>
-            <div class = "bob">
-                <p class="events" > Daily Events</p>
+            <div>
+                <h2>Events</h2>
+                <h3> Daily Events</h3>
+                <p>Come join us for one of our weekly meets!</p>
                 <table class="eventTable">
                     <tr class="dailyEvents">
                         <th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th></tr>
@@ -47,8 +53,10 @@
                         <td>Magic the Gathering Commander</td><td>Warhammer 40K</td><td>Open Table</td><td>Yu-Gi-Oh</td><td>FNM and Eau Claire Board Game Group</td><td>Pathfinder Society</td><td>Open Table</td>
                     </tr>
                 </table>
-                <p class="specialEvents" > Special Events</p>
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FClairemont-Comics-1462263010699477&tabs&width=180&height=70&small_header&adapt_container_width&hide_cover&show_facepile&appId" width="340" height="500" style="border:none;overflow:visible" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <h3> Special Events</h3>
+                <center>
+                    <div class="fb-page" data-href="https://www.facebook.com/Clairemont-Comics-1462263010699477/events/?ref=page_internal" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Clairemont-Comics-1462263010699477/events/?ref=page_internal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Clairemont-Comics-1462263010699477/events/?ref=page_internal">Clairemont Comics</a></blockquote></div>
+                </center>
             </div>
            
         </content>

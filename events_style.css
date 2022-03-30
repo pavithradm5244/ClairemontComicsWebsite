@@ -1,0 +1,56 @@
+content h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(121, 9, 5);
+    font-weight: lighter;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+content p{
+    text-align: center;
+    margin-bottom: 0.8em;
+}
+
+header{
+    z-index: 1;
+}
+
+.eventTable{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.dailyEvents th , .dailyEvents td{
+border: 2px solid white;
+padding: 5px; 
+}
+
+/* Rounded corners for the table */
+.eventTable th:first-of-type {
+    border-top-left-radius: 10px;
+}
+.eventTable th:last-of-type {
+    border-top-right-radius: 10px;
+}
+.eventTable tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+.eventTable tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+}
+
+.eventTable th{
+    background-color: rgb(121, 9, 5);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    color: white;
+}
+
+.eventTable tr{
+    background-color: rgb(245, 229, 212);
+}
+
+fb-page{
+    z-index: 0;
+}

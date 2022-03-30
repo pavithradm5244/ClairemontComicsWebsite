@@ -9,15 +9,20 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+body{
+    height: 100%;
+    width: 100%;
+}
+
 /* this is the grid container for the whole page */
 container{
     display: grid;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     grid-template-areas: 
         "left-space border_left content border_right right-space"
         "footer footer footer footer footer";
-    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+    grid-template-rows: 1fr minmax(min-content, max-content);
     grid-template-columns: 1fr 25px 1000px 25px 1fr;
     background-color: black;
     grid-row-gap: 15px;
@@ -239,17 +244,13 @@ footer a:hover, footer a:active{
             "content"
             "footer";
         grid-template-columns: 100%;
-        grid-template-rows: 1fr auto;
-        min-height: 100vh;
+        grid-template-rows: 1fr min-content;
+        height: 100%;
     }
 
-    /*footer{
-        grid-template-areas: 
-            "footer_header"
-            "footer_contact"
-            "footer_hours";
-        grid-template-columns: 100%;
-    }*/
+    .border_left, .border_right, left-space, right-space{
+        display:none;
+    }
 
 }
 
