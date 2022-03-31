@@ -24,6 +24,7 @@ header{
 .dailyEvents th , .dailyEvents td{
 border: 2px solid white;
 padding: 5px; 
+width: 14.28%;
 }
 
 /* Rounded corners for the table */
@@ -54,3 +55,39 @@ padding: 5px;
 fb-page{
     z-index: 0;
 }
+.eventHeader{
+ font-size: 400%;
+}
+@media screen and (max-width: 900px) {
+    content {
+        font-size: 90%;
+    }
+}
+@media screen and (max-width: 850px) {
+    content {
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 700px) {
+    content {
+        font-size: 70%;
+    }
+}
+@media screen and (max-width: 650px) {
+    content {
+        font-size: 60%;
+    }
+}
+@media screen and (max-width: 600px) {
+    content {
+        font-size: 55%;
+    }
+}
+@media screen and (max-width: 550px) {
+    content {
+        font-size: 51%;
+    }
+}
+
+
+
