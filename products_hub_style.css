@@ -9,6 +9,11 @@ h4 {
     font-size: larger;
 }
 
+.page_desc{
+    text-align: center;
+    margin-bottom: 0.8em;
+}
+
 .card {
     background-color: #fff;
     border-radius: 10px;

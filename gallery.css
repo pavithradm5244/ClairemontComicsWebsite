@@ -8,10 +8,6 @@
   	-webkit-box-shadow: 5px 4px 9px 2px #969696;
 }
 
-header{
-    z-index: 1;
-}
-
 .imgContainer {
     float: left;
     position: relative;
