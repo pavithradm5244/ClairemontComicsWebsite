@@ -49,6 +49,13 @@
         width: 150px;
         height: 200px;
     }
+    .imgContainer:hover div{
+        width: fit-content;
+        max-width: 150px;
+        padding: 8px 15px;
+        visibility: visible;
+        opacity: 0.7; 
+       }
 }
 
 
