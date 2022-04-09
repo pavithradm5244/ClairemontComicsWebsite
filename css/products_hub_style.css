@@ -1,67 +1,73 @@
-.card h2 {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    color:rgb(160, 11, 6);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: lighter;
-    text-transform: uppercase;
-    align-items: flex-end;
+h2 {
+    font-family: 'Anton', sans-serif;
+    color: #2c012e;
+    font-size: larger;
 }
 
-content p{
+h4 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+
+.page_desc{
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 2em;
-    font-size: 1.25em;
+    margin-bottom: 0.8em;
 }
 
 .card {
-    display: flex;
-    grid-template-columns: 90% 10%;
+    background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0px 2px 20px rgb(0, 0, 0, 1);
+    overflow: hidden;
+    width: 24.5%;
     transition: all 0.3s ease-out;
-    max-height: 200px;
-    justify-content: center;
-    align-items: flex-end;
 }
 
-content a{
-    text-decoration: none;
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    min-height: 250px;
 }
 
-.card img {
-    max-width: 100%;
-    max-height: 200px;
-    object-fit: contain;
+.card-header img {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.tag {
+    background-color: rgb(137, 212, 39);
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-.product_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 25px;
-=======
 
 .card:hover {
     transform: scale(1.01);
->>>>>>> 11a74ca9ed5d9410491705a1534d3f32dbba6a31
 }
 
 
 
-@media (max-width: 600px) {
-    .product_container {
+@media (min-width: 1000px) {
+    .content {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 100%;
-        gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr 1fr  ;
+        gap: 20px;
         margin: auto;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px rgb(0, 0, 0, 1);
+        overflow: hidden;
+        width: 100%;
+        transition: all 0.3s ease-out;
     }
 }
 
