@@ -159,7 +159,7 @@ content h1{
 /* empty space to the left of the content container */
 left-space{
     grid-area: left-space;
-    background-image: url(images/background_2.png);
+    background-image: url(../images/background_2.png);
     margin-top: 67px;
 }
 
@@ -179,7 +179,7 @@ left-space{
 /* empty space to the right of the content container */
 right-space{
     grid-area: right-space;
-    background-image: url(images/background_2.png);
+    background-image: url(../images/background_2.png);
     margin-top: 67px;
 }
 
