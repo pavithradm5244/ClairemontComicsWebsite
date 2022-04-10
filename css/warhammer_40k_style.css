@@ -65,7 +65,7 @@ h4 {
     transform: scale(1.05);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .cardplace2 {
         display: grid;
         grid-template-columns: 1fr 1fr ;
