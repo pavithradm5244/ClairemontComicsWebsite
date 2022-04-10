@@ -68,7 +68,24 @@ h4 {
 @media (min-width: 1000px) {
     .cardplace2 {
         display: grid;
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: auto;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px rgb(0, 0, 0, 1);
+        overflow: hidden;
+        width: 98%;
+        transition: all 0.3s ease-out;
+    }
+}
+
+@media (max-width: 800px) {
+    .cardplace2 {
+        display: grid;
+        grid-template-columns: 1fr ;
         gap: 20px;
         margin: auto;
     }
