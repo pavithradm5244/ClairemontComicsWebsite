@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="/images/clairmont.svg">
     <title>Clairemont Comics</title>
 </head>
+
 <body>
     <container>
         <!--Header Markup-->
@@ -39,8 +41,41 @@
         <!--Main Content Markup-->
         <content>
             <h1>Gallery</h1>
+            <?php
+            DEFINE ('DB_USER', 'root');
+            DEFINE ('DB_PASSWORD', '');
+            DEFINE ('DB_HOST', 'localhost');
+            DEFINE ('DB_NAME', 'test1');
             
-            <div class="imgContainer">
+            
+            $dbc = @mysqli_connect(DB_HOST,DB_USER, DB_PASSWORD, DB_NAME)
+            or die('Could not connect!'.mysqli_connect_error());
+            
+            
+            $query = "SELECT path, text FROM gallery";
+                    $response = @mysqli_query($dbc, $query);
+            
+                    if ($response){
+            
+                        while($row = mysqli_fetch_array($response)){
+            
+                        echo '<div class="imgContainer">
+                        <img class="facebook" src="' . $row['path'] . '" alt="'. $row['text'] . '">
+                        <div class="description">'. $row['text'] . '</div>';
+            
+                        echo '</div>';
+                
+                
+                        }
+                
+                
+                    }
+            // else{
+            // 	echo "No connection!";
+            // }
+            
+            ?>
+            <!-- <div class="imgContainer">
                 <img class="facebook" src="images/titan.jpg" alt="titan">
                 <div class="description">This is an awesome Titan mini figure that we sell here at Clairemont Comics</div>
             </div>
@@ -54,7 +89,7 @@
             </div>
             <div class="imgContainer">
                 <img class="facebook" src="images/warhammer.jpg" alt="warhammer">
-                <div class="description">Warhammer takes money directly from our wallets too</div>
+                <div class="description">We cannot stop Warhammer from reaching into our wallets either</div>
             </div>
             <div class="imgContainer">
                 <img class="facebook" src="images/table.jpg" alt="table">
@@ -71,8 +106,8 @@
             <div class="imgContainer">
                 <img class="facebook" src="images/haven.jpg" alt="haven">
                 <div class="description">More great Merchandise!</div>
-            </div>
-    
+            </div> -->
+
         </content>
         <div class="border_right"></div>
         <right-space></right-space>
@@ -89,12 +124,12 @@
                     <!-- location icon and google-map link -->
                     <tr>
                         <td>
-                            <a href = 'https://goo.gl/maps/zjVLgztXhXH7Uqxk6' target="_blank">
+                            <a href='https://goo.gl/maps/zjVLgztXhXH7Uqxk6' target="_blank">
                                 <img src="images/location-dot-solid_1-svg_1.png" alt="Location">
                             </a>
                         </td>
                         <td>
-                            <a href = 'https://goo.gl/maps/zjVLgztXhXH7Uqxk6' target="_blank">
+                            <a href='https://goo.gl/maps/zjVLgztXhXH7Uqxk6' target="_blank">
                                 <p>2215 Fairfax St <br>Eau Claire, WI 54701</p>
                             </a>
                         </td>
@@ -108,19 +143,19 @@
                         </td>
                         <td>
                             <a href="tel:715-831-2112">
-                                <p>(715) 831-2112</p>    
-                            </a>                        
+                                <p>(715) 831-2112</p>
+                            </a>
                         </td>
                     </tr>
                     <!-- email icon and mailto link-->
                     <tr>
                         <td>
-                            <a href = 'mailto: charsh@clairemontcomics.com'>
-                                <img src="images/envelope-solid-svg_1.png" alt="Email:" >
+                            <a href='mailto: charsh@clairemontcomics.com'>
+                                <img src="images/envelope-solid-svg_1.png" alt="Email:">
                             </a>
                         </td>
                         <td>
-                            <a href = 'mailto: charsh@clairemontcomics.com'>
+                            <a href='mailto: charsh@clairemontcomics.com'>
                                 <p>charsh@clairemontcomics.com</p>
                             </a>
                         </td>
@@ -128,12 +163,14 @@
                     <!-- facebook icon and facebook page link-->
                     <tr>
                         <td>
-                            <a href="https://www.facebook.com/pages/category/Comic-Bookstore/Clairemont-Comics-1462263010699477/" target='_blank'>
-                                <img src="images/facebook-brands-svg_1.png" alt="Facebook:">  
+                            <a href="https://www.facebook.com/pages/category/Comic-Bookstore/Clairemont-Comics-1462263010699477/"
+                                target='_blank'>
+                                <img src="images/facebook-brands-svg_1.png" alt="Facebook:">
                             </a>
                         </td>
                         <td>
-                            <a href="https://www.facebook.com/pages/category/Comic-Bookstore/Clairemont-Comics-1462263010699477/" target='_blank'>
+                            <a href="https://www.facebook.com/pages/category/Comic-Bookstore/Clairemont-Comics-1462263010699477/"
+                                target='_blank'>
                                 <p>Facebook</p>
                             </a>
                         </td>
@@ -176,4 +213,5 @@
         </footer>
     </container>
 </body>
+
 </html>
