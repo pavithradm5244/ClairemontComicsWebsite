@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/framework_style.css">
     <link rel="stylesheet" href="css/d&d_style.css">
     <link rel="icon" type="image/x-icon" href="/images/clairmont.svg">
+    <script src="js/nav.js" defer></script>
     <title>Clairemont Comics</title>
 </head>
 
