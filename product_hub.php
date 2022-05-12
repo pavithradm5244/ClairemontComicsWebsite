@@ -41,7 +41,37 @@
             <h1>Products</h1>
             <p class="page_desc">Here are some of the many product lines we carry in store</p>
             <div class = "product_container">
-                <div class="card">
+
+            <?php
+            DEFINE ('DB_USER', 'root');
+            DEFINE ('DB_PASSWORD', '');
+            DEFINE ('DB_HOST', 'localhost');
+            DEFINE ('DB_NAME', 'products');
+
+            $dbc = @mysqli_connect(DB_HOST,DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect!'.mysqli_connect_error());
+            $query = "SELECT product_image_path, product_name, product_link FROM product_hub";
+                    $response = @mysqli_query($dbc, $query);           
+                    if ($response){
+            
+                        while($row = mysqli_fetch_array($response)){
+            
+                            echo '<div class="card">
+                                    <a href="'.$row['product_link'].'">
+                                        <img class="product_logo" src="' . $row['product_image_path'] . '" alt="">
+                                        <h2>'. $row['product_name'] . '</h2>
+                                    </a>
+
+                            </div>';
+
+                        }
+
+                    }
+                    // else{
+                    // 	echo "No connection!";
+                    // }
+            ?>
+            </div>
+                <!-- <div class="card">
                     <a href="warhammer_40k.html">
                         <img class="product_logo" src="images/Warhammer_40k.jpeg" alt="Warhamer_40k">
                         <h2>Warhammer 40k</h2>
@@ -64,8 +94,8 @@
                         <img class="product_logo" src="images/Magic_the_gathering.png" alt="Warhamer_40k">
                         <h2>Magic the Gathering</h2>
                     </a>
-                </div>
-            </div>
+                </div>-->
+             
         </content> 
         <div class="border_right"></div>
         <right-space></right-space>

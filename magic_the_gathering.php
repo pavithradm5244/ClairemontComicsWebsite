@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/framework_style.css">
-    <link rel="stylesheet" href="css/products_hub_style.css">
+    <link rel="stylesheet" href="css/d&d_style.css">
     <link rel="icon" type="image/x-icon" href="/images/clairmont.svg">
     <title>Clairemont Comics</title>
 </head>
+
 <body>
     <container>
         <!--Header Markup-->
@@ -38,35 +39,124 @@
         <div class="border_left"></div>
         <!--Main Content Markup-->
         <content>
-            <h1>Products</h1>
-            <p class="page_desc">Here are some of the many product lines we carry in store</p>
-            <div class = "product_container">
-                <div class="card">
-                    <a href="warhammer_40k.html">
-                        <img class="product_logo" src="images/Warhammer_40k.jpeg" alt="Warhamer_40k">
-                        <h2>Warhammer 40k</h2>
-                    </a>
+            <h1>MAGIC THE GATHERING</h1>
+            <div class="cardplace0">
+                <div class="cardplace1">
+                <?php
+                DEFINE ('DB_USER', 'root');
+                DEFINE ('DB_PASSWORD', '');
+                DEFINE ('DB_HOST', 'localhost');
+                DEFINE ('DB_NAME', 'products');
+
+                $dbc = @mysqli_connect(DB_HOST,DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect!'.mysqli_connect_error());
+                $query = "SELECT product_image_path, product_name FROM magic_the_gathering";
+                        $response = @mysqli_query($dbc, $query);           
+                        if ($response){
+                            if($row = mysqli_fetch_array($response)){
+            
+                            echo '<div class="card">
+                                    <div class="card-header">
+                                        <img src="' . $row['product_image_path'] . '" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4>'. $row['product_name'] . '</h4>
+                                    </div>
+                            </div>';
+                            }
+                        }
+                // else{
+                // 	echo "No connection!";
+                // }
+                ?>
+                    <!--<div class="card">
+                        <div class="card-header">
+                            <img src="images/Dungeon_and_Dragons.jpeg" alt="">
+                        </div>    
+                        <div class="card-body">
+                            <h4>D&D departs from traditional wargaming by allowing each player to create their own character to play instead of a military formation. These characters embark upon imaginary adventures within a fantasy setting. A Dungeon Master (DM) serves as the game's referee and storyteller, while maintaining the setting in which the adventures occur, and playing the role of the inhabitants of the game world. The characters form a party and they interact with the setting's inhabitants and each other.</h4>
+                        </div>
+                    </div>-->
+                </div>    
+
+                <div class="cardplace2">
+                <?php
+                DEFINE ('DB_USER', 'root');
+                DEFINE ('DB_PASSWORD', '');
+                DEFINE ('DB_HOST', 'localhost');
+                DEFINE ('DB_NAME', 'products');
+
+                $dbc = @mysqli_connect(DB_HOST,DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect!'.mysqli_connect_error());
+                $query = "SELECT * FROM magic_the_gathering WHERE product_id >= 2";
+                        $response = @mysqli_query($dbc, $query);           
+                        if ($response){
+                            while($row = mysqli_fetch_array($response)){
+            
+                            echo '<div class="card">
+                                    <div class="card-header">
+                                        <img src="' . $row['product_image_path'] . '" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h2>'. $row['product_name'] . '</h>
+                                    </div>
+                            </div>';
+                            }
+                        }
+                // else{
+                // echo "No connection!";
+                // }
+                ?>
+                    <!--<div class="card">
+                        <div class="card-header">
+                            <img src="images/Fizbans_Treasury_of_Dragons.png" alt="">
+                        </div>    
+                        <div class="card-body">
+                            <h2>Fizban’s Treasury of Dragons</h2>
+                            <h4></h4>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/Strixhaven_A_Curriculum_of_Chaos.png" alt="">
+                        </div>
+                        
+                        <div class="card-body">
+                            <h2>Strixhaven: A Curriculum of Chaos</h2>
+                            <h4></h4>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/The_Wild_Beyond_the_Witchlight.png" alt="">
+                        </div>
+                    
+                        <div class="card-body">
+                            <h2>The Wild Beyond the Witchlight</h2>
+                            <h4></h4>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/Candlekeep_Mysteries.png" alt="">
+                        </div>
+                    
+                        <div class="card-body">
+                            <h2>Candlekeep Mysteries</h2>
+                            <h4></h4>
+                        </div>
+                    </div>-->
+        
+                        
                 </div>
-                <div class="card">
-                    <a href="d&d.html">
-                        <img class="product_logo" src="images/Dungeon_and_Dragons.jpeg" alt="Warhamer_40k">
-                        <h2>Dungeons and Dragons</h2>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="warhammer_age_of_sigmar.html">
-                        <img class="product_logo" src="images/Warhammer_Age_of_Sigmar.png" alt="Warhamer_40k">
-                        <h2>Warhammer Age of Sigmar</h2>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="magic_the_gathering.html">
-                        <img class="product_logo" src="images/Magic_the_gathering.png" alt="Warhamer_40k">
-                        <h2>Magic the Gathering</h2>
-                    </a>
-                </div>
-            </div>
-        </content> 
+                
+
+            </div> 
+
+            
+        </content>
+        
         <div class="border_right"></div>
         <right-space></right-space>
 
