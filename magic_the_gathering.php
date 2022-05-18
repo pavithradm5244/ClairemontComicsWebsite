@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/framework_style.css">
     <link rel="stylesheet" href="css/d&d_style.css">
     <link rel="icon" type="image/x-icon" href="/images/clairmont.svg">
+    <script src="js/nav.js" defer></script>
     <title>Clairemont Comics</title>
 </head>
 
@@ -46,7 +47,7 @@
                 DEFINE ('DB_USER', 'root');
                 DEFINE ('DB_PASSWORD', '');
                 DEFINE ('DB_HOST', 'localhost');
-                DEFINE ('DB_NAME', 'products');
+                DEFINE ('DB_NAME', 'test1');
 
                 $dbc = @mysqli_connect(DB_HOST,DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect!'.mysqli_connect_error());
                 $query = "SELECT product_image_path, product_name FROM magic_the_gathering";
