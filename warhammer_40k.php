@@ -80,12 +80,12 @@
 
                 <div class="cardplace2">
                 <?php
-                DEFINE ('DB_USER', 'root');
-                DEFINE ('DB_PASSWORD', '');
-                DEFINE ('DB_HOST', 'localhost');
-                DEFINE ('DB_NAME', 'products');
+                DEFINE ('DB_USER2', 'root');
+                DEFINE ('DB_PASSWORD2', '');
+                DEFINE ('DB_HOST2', 'localhost');
+                DEFINE ('DB_NAME2', 'products');
 
-                $dbc = @mysqli_connect(DB_HOST,DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect!'.mysqli_connect_error());
+                $dbc = @mysqli_connect(DB_HOST2,DB_USER2, DB_PASSWORD2, DB_NAME2) or die('Could not connect!'.mysqli_connect_error());
                 $query = "SELECT * FROM `warhammer_40k` WHERE product_id >= 2";
                         $response = @mysqli_query($dbc, $query);           
                         if ($response){
