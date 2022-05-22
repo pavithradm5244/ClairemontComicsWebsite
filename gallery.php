@@ -41,6 +41,7 @@
         <!--Main Content Markup-->
         <content>
             <h1>Gallery</h1>
+            <!--Pull images for gallery from database and display them in divs-->
             <?php
             DEFINE ('DB_USER', 'root');
             DEFINE ('DB_PASSWORD', '');
@@ -70,43 +71,8 @@
                 
                 
                     }
-            // else{
-            // 	echo "No connection!";
-            // }
             
             ?>
-            <!-- <div class="imgContainer">
-                <img class="facebook" src="images/titan.jpg" alt="titan">
-                <div class="description">This is an awesome Titan mini figure that we sell here at Clairemont Comics</div>
-            </div>
-            <div class="imgContainer">
-                <img class="facebook" src="images/figure.jpg" alt="figure">
-                <div class="description">Rare and good condition collectable actions figures</div>
-            </div>
-            <div class="imgContainer">
-                <img class="facebook" src="images/files.jpg" alt="files">
-                <div class="description">Hidden treasures await</div>
-            </div>
-            <div class="imgContainer">
-                <img class="facebook" src="images/warhammer.jpg" alt="warhammer">
-                <div class="description">We cannot stop Warhammer from reaching into our wallets either</div>
-            </div>
-            <div class="imgContainer">
-                <img class="facebook" src="images/table.jpg" alt="table">
-                <div class="description">Come play with us!</div>
-            </div>
-            <div class="imgContainer">
-                <img class="facebook" src="images/rocks.jpg" alt="rocks">
-                <div class="description">Awesome Merchandise!</div>
-            </div>
-            <div class="imgContainer">
-                <img class="facebook" src="images/panther.jpg" alt="panther">
-                <div class="description">Comic books are a big hit!</div>
-            </div>
-            <div class="imgContainer">
-                <img class="facebook" src="images/haven.jpg" alt="haven">
-                <div class="description">More great Merchandise!</div>
-            </div> -->
 
         </content>
         <div class="border_right"></div>
