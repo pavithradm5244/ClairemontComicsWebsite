@@ -15,25 +15,26 @@
     <container>
         <!--Header Markup-->
         <header>
-            <h2 class="logo">
-                <a href="index.html">
-                    <img src="images/clairmont.svg" alt="logo" style="height: 1.5em; vertical-align:middle;">
-                    Clairemont Comics
-                </a>
-            </h2>
-            <input type="checkbox" id="nav_toggle" class="nav_toggle" style="height: 1em;">
             <nav>
-                <ul>
-                    <li><a href='products_hub.html'>Products</a></li>
-                    <li><a href='events.html'>Events</a></li>
-                    <li><a href='gallery.html'>Gallery</a></li>
-                    <li><a href='faq.html'>FAQ</a></li>
-                    <li><a href='contact_us.html'>Contact Us</a></li>
+                <h2 class="logo">
+                    <a href="index.html">
+                        <img src="images/clairmont.svg" alt="logo" style="height: 57px; vertical-align:middle;">
+                        Clairemont Comics
+                    </a>
+                </h2>
+                <div class="menu_toggle" id="mobile_menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav_menu">
+                    <li><a href='products_hub.php' class="nav_links">Products</a></li>
+                    <li><a href='events.html' class="nav_links">Events</a></li>
+                    <li><a href='gallery.php'class="nav_links">Gallery</a></li>
+                    <li><a href='faq.html' class="nav_links">FAQ</a></li>
+                    <li><a href='contact_us.php' class="nav_links">Contact Us</a></li>
                 </ul>
             </nav>
-            <label for="nav_toggle" class="nav_toggle_label">
-                <span></span>
-            </label>
         </header>
 
         <left-space></left-space>
@@ -84,7 +85,7 @@
                 DEFINE ('DB_USER2', 'root');
                 DEFINE ('DB_PASSWORD2', '');
                 DEFINE ('DB_HOST2', 'localhost');
-                DEFINE ('DB_NAME2', 'products');
+                DEFINE ('DB_NAME2', 'test1');
 
                 $dbc = @mysqli_connect(DB_HOST2,DB_USER2, DB_PASSWORD2, DB_NAME2) or die('Could not connect!'.mysqli_connect_error());
                 $query = "SELECT * FROM `warhammer_Age_of_Sigmar` WHERE product_id >= 2";
